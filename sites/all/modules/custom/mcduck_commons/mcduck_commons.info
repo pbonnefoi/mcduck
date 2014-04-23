@@ -1,0 +1,4 @@
+name = McDuck Commons
+description = Commons tools for McDuck
+core = 7.x
+project = "mcduck_commons"

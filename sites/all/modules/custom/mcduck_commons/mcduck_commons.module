@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Primarily Drupal hooks and tools for IAAB
+ */
+
+function mcduck_commons_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform_client_form_4') {
+    foreach ($form['submitted'] as $key => $element) {
+      if ($element['#type'] == 'textfield' || $element['#type'] == 'textarea' || $element['#type'] == 'webform_email') {
+        $form['submitted'][$key]['#attributes']['placeholder'] = $element['#title'];
+      }
+    }
+    $form['actions']['submit']['#attributes']['class'] = array('button', 'form');
+  }
+}
+
+function mcduck_commons_init() {
+  global $base_url;
+  drupal_add_js(array('mcduck_commons' => array('base_url' => $base_url)), 'setting');
+}

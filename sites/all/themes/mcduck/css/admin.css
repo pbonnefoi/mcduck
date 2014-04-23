@@ -1,0 +1,25 @@
+.tabs {
+  height: 40px;
+  max-width: 1240px;
+  margin: auto;
+}
+
+.tabs li {
+  background: #fff;
+  float: left;
+  margin-right: 10px;
+  padding: 0 15px;
+}
+
+.tabs li:hover {
+  background: #34dddd;
+  transition: background .3s;
+  -moz-transition: background .3s;
+  -webkit-transition: background .3s;
+  -o-transition: background .3s;
+}
+
+#admin-menu {
+  font-family: normal small "Lucida Grande", Verdana, sans-serif;
+  font-weight: normal;
+}
